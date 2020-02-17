@@ -1,0 +1,140 @@
+{
+  "profiles": [
+    {
+      "userId": 1,
+      "userName": "市教育局管理员",
+      "userEmail": "city1",
+      "userRoles": ["ROLE_GOV"]
+    },
+    {
+      "userId": 2,
+      "userName": "学校1管理员",
+      "userEmail": "school1",
+      "userRoles": ["ROLE_SCHOOL"],
+      "schoolId": 1,
+      "schoolName": "学校1",
+      "parentCountyId": 1
+    },
+    {
+      "userId": 3,
+      "userName": "区县1管理员",
+      "userEmail": "county1",
+      "userRoles": ["ROLE_COUNTY"],
+      "countyId": 1,
+      "countyName": "区县1"
+    },
+    {
+      "userId": 4,
+      "userName": "机构1管理员",
+      "userEmail": "organization1",
+      "userRoles": ["ROLE_ORGANIZATION"],
+      "organizationId": 1,
+      "organizationName": "机构1"
+    },
+    {
+      "userId": 5,
+      "userName": "专家1",
+      "userEmail": "expert1",
+      "userRoles": ["ROLE_EXPERT"]
+    },
+    {
+      "userId": 6,
+      "userName": "专家2",
+      "userEmail": "expert2",
+      "userRoles": ["ROLE_EXPERT"]
+    }
+  ],
+  "trainings": [
+    {
+      "id": 1,
+      "title": "t1",
+      "summary": "s1"
+    }
+  ],
+  "surveyCategories": [
+    {
+      "id": 1,
+      "trainingId": 1,
+      "name": "项目大类1"
+    }
+  ],
+  "surveyCategoryChildren": [
+    {
+      "id": 1,
+      "trainingId": 1,
+      "surveyCategoryId": 1,
+      "name": "专业1",
+      "startDate": 1581920782104,
+      "endDate": 1581920782104,
+      "remark": "专业备注1"
+    }
+  ],
+  "surveys": [
+    {
+      "id": 1,
+      "trainingId": 1,
+      "surveyCategoryChildId": 1,
+      "schoolId": 1,
+      "schoolName": "学校1",
+      "countyId": 1,
+      "status": "SCHOOL_SAVE",
+      "headcount": 10,
+      "remark": "需求备注1"
+    },
+    {
+      "id": 2,
+      "trainingId": 1,
+      "surveyCategoryChildId": 1,
+      "schoolId": 2,
+      "schoolName": "学校2",
+      "countyId": 1,
+      "status": "SCHOOL_SAVE",
+      "headcount": 20,
+      "remark": "需求备注2"
+    }
+  ],
+  "trainingProjects": [
+    {
+      "id": 1,
+      "trainingId": 1,
+      "name": "",
+      "startDate": 1581920782104,
+      "endDate": 1581920782104,
+      "duration": 1,
+      "headcount": 100,
+      "cost": "每人1千元",
+      "inCity": true,
+      "remark": "备注1"
+    }
+  ],
+  "trainingProjectPlans": [
+    {
+      "id": 1,
+      "trainingId": 1,
+      "trainingProjectId": 1,
+      "organizationId": 1,
+      "organizationName": "机构1",
+      "planFileUrl": "http://www.example.com/p/1.pdf"
+    },
+    {
+      "id": 2,
+      "trainingId": 1,
+      "trainingProjectId": 1,
+      "organizationId": 2,
+      "organizationName": "机构2",
+      "planFileUrl": "http://www.example.com/p/2.pdf"
+    }
+  ],
+  "evaluations": [
+    { "id": 1, "trainingId": 1, "userId": 5, "scoreFileUrl": "http://www.example.com/e/1.pdf", "remark": "备注1" },
+    { "id": 2, "trainingId": 1, "userId": 6, "scoreFileUrl": "http://www.example.com/e/2.pdf", "remark": "备注2" }
+  ],
+  "trainingReports": [
+    {
+      "trainingId": 1,
+      "schoolId": 1,
+      "schoolName": "学校1",
+      "reportFileUrl": "http://www.example.com/e/1.xls"
+    }
+  ]
+}
